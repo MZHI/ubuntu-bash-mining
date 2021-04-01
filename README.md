@@ -1,6 +1,6 @@
 # ubuntu-bash-mining
 
-ubuntu-bash-mining is a set of bash scripts examples to simplify automatization of your cryptocurrency mining. In this repo used example for [ethminer](https://github.com/ethereum-mining/ethminer.git) tool. For building instructions please visit original repo, but some brief instructions you can find in this Readme
+**ubuntu-bash-mining** is a set of bash scripts examples to simplify automatization of your cryptocurrency mining. In this repo used example for [ethminer](https://github.com/ethereum-mining/ethminer.git) tool. For building instructions please visit original repo, but some brief instructions you can find in this Readme
 
 ## Why are these scripts useful
 
@@ -11,14 +11,14 @@ ubuntu-bash-mining is a set of bash scripts examples to simplify automatization 
 
 ## Usage
   
-1. Open start_mining.sh script and change field [etherium address] to your real etherium address
-2. Open check_mining.sh script and set actual path to variable SCRIPT_START_MINE
+1. Open **start_mining.sh** script and change field `[etherium address]` to your real etherium address
+2. Open **check_mining.sh** script and set actual path to variable `SCRIPT_START_MINE`
 3. Run command:
 ```sh
 $ echo $PATH
 ```
-Then get this value and copy into script check_users.sh -> PATH
-4. Set needed list of users into variable USERS in script check_users.sh. Mining will stop when one of these users is logged in. Also, set actual paths for variables SCRIPT_CHECK and SCRIPT_STOP
+Then get this value and set to variable `PATH` from script **check_users.sh** 
+4. Set needed list of users into variable `USERS` in script **check_users.sh**. Mining will stop when one of these users is logged in. Also, set actual paths for variables `SCRIPT_CHECK` and `SCRIPT_STOP`
 5. Change mode for all bash scripts:
 ```sh
 $ chmod +x start_mining.sh

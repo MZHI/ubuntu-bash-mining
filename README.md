@@ -1,13 +1,14 @@
 # ubuntu-bash-mining
 
-**ubuntu-bash-mining** is a set of bash scripts examples to simplify automatization of your cryptocurrency mining. In this repo used example for [ethminer](https://github.com/ethereum-mining/ethminer.git) tool. For building instructions please visit original repo, but some brief instructions you can find in this Readme
+**ubuntu-bash-mining** is a set of bash scripts examples to simplify automatization for mining of cryptocurrency. In this repo example for [ethminer](https://github.com/ethereum-mining/ethminer.git) tool used. For building instructions please visit original repo, but some brief instructions you can find in this Readme file.
 
 ## Why are these scripts useful
 
-* Complete example script for starting mining ETH in linux's screen
+* Complete example script for starting mining ETH in linux's SCREEN
 * Sample pool connection string syntax (pool [nanopool](https://nanopool.org))
 * Example of bash script for checking if mining already run, and start if not
 * Example of bash script for stop mining if specific ubuntu users are logged in
+* Example how use sheduling in CRON
 
 ## Usage
   

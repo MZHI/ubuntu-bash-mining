@@ -1,6 +1,6 @@
 # ubuntu-bash-mining
 
-**ubuntu-bash-mining** is a set of bash scripts examples to simplify automatization for mining of cryptocurrency. In this repo example for [ethminer](https://github.com/ethereum-mining/ethminer.git) tool used. For building instructions please visit original repo, but some brief instructions you can find in this Readme file.
+**ubuntu-bash-mining** is a set of bash scripts examples to simplify automatization for mining of cryptocurrency. In this repo example for [ethminer](https://github.com/ethereum-mining/ethminer.git) tool used (for building instructions please visit original repo, but some brief instructions you can find in this Readme file).
 
 ## Why are these scripts useful
 

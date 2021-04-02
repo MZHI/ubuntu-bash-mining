@@ -5,15 +5,15 @@
 ## Why are these scripts useful
 
 * Complete example script for starting mining ETH in linux's SCREEN
-* Sample pool connection string syntax (pool [nanopool](https://nanopool.org))
+* Complete example script for connect with mining pool (for [nanopool](https://nanopool.org))
 * Example of bash script for checking if mining already run, and start if not
-* Example of bash script for stop mining if specific ubuntu users are logged in
-* Example how use sheduling in CRON
+* Example of bash script for stop mining if specific ubuntu users are logged in, and start when logged out
+* Using sheduling in CRON
 
 ## Usage
   
 1. Open **start_mining.sh** script and change field `[etherium address]` to your real etherium address
-2. Open **check_mining.sh** script and set actual path to variable `SCRIPT_START_MINE`
+2. Open **check_mining.sh** script and set actual script path to variable `SCRIPT_START_MINE`
 3. Run command:
 ```sh
 $ echo $PATH
@@ -32,7 +32,7 @@ $ chmod +x check_users.sh
 $ crontab -e
 ```
 and set your shedule for checking. 
-If you want checking status of mining no matter what user is in the system, then add this line to crontab:
+If you want checking status of mining no matter what user is in the system, then add this line to crontab (script `check_users.sh` will not be used):
 ```
 * * * * * [ubuntu-bash-mining]/check_mining.sh
 ```

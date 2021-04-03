@@ -12,8 +12,8 @@
 
 ## Usage
   
-1. Open **start_mining.sh** script and change field `[etherium address]` to your real etherium address
-2. Open **check_mining.sh** script and set actual script path to variable `SCRIPT_START_MINE`
+1. Open `start_mining.sh` script and change field `[etherium address]` to your real etherium address
+2. Open `check_mining.sh` script and set actual script path to variable `SCRIPT_START_MINE`
 3. Run command:
 ```sh
 $ echo $PATH

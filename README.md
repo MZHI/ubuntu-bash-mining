@@ -70,4 +70,40 @@ $ cmake .. -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON
 $ sudo make install
 ```
 
-## How to build ethminer for Radeon RX 580 8GB (TODO)
+## How to build ethminer for Radeon RX 580 8GB
+
+1. Check availability of graphic card:
+```sh
+$ lspci | grep VGA
+```
+My output:
+```sh
+01:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Ellesmere [Radeon RX 470/480/570/570X/580/580X] (rev e7)
+```
+Use [this](https://askubuntu.com/questions/987778/how-to-fix-broken-packages-after-amdgpu-pro-install-fail) manual if you need to remove previous drivers installations
+
+2. Use [this link](https://amdgpu-install.readthedocs.io/en/latest/) to get installations details from official site
+
+3. Installation (get from [this](https://www.amd.com/en/support/kb/faq/amdgpupro-install))
+```sh
+$ tar -Jxvf amdgpu-pro-17.40-483984.tar.xz
+$ cd amdgpu-pro-17.40-483984
+$ ./amdgpu-pro-install -y --compute
+```
+
+4. Install OpenCL ICD (installable client driver) and mesa:
+```sh
+$ apt-get install opencv-amdgpu-pro-icd
+$ apt-get install git mesa-common-dev cmake
+```
+
+5. Download and install ethminer:
+```sh
+$ git clone https://github.com/ethereum-mining/ethminer.git
+$ cd ethminer
+$ git submodule update --init --recursive
+$ mkdir build; cd build
+$ cmake .. -DETHASHCUDA=OFF -DETHASHCL=ON
+$ cmake --build . -- j4 # may be skip this step - don't remember
+$ sudo make install
+```
